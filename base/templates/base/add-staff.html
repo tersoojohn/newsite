@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/pagestyle.css' %}">
+</head>
+<body>
+    <main>
+        <div class="creation-title">
+            Add Staff
+        </div>
+        <form action="" class="pageform" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="element">
+                <label for="firstname">Firstname:</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+
+            <div class="element">
+                <label for="lastname">LastName</label>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+
+            <div class="element">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+            </div>
+
+            <div class="element">
+                <label for="work">Field</label>
+                <input type="text" name="work" id="work">
+            </div>
+
+            <div class="element">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob">
+            </div>
+
+            <div class="image">
+                <label for="image1">
+                    <input type="file" name="image1" id="image1">
+                    Staff Image
+                </label>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>

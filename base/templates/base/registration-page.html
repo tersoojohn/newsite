@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/pagestyle.css' %}">
+</head>
+<body>
+    <main>
+        <div class="creation-title">
+            Signup
+        </div>
+
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <form action="" class="signup pageform" method="POST">
+            {% csrf_token %}
+            <div class="element">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+
+            <div class="element">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+
+            <div class="element">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="email">
+            </div>
+
+            <div class="element">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+
+            <div class="element">
+                <label for="profile-pic">Profile Picture <input type="file" name="profile-pic" id="profile-pic"></label>
+            </div>
+
+            <div class="element">
+                <label for="password1">Password</label>
+                <input type="password" name="password1" id="password1">
+            </div>
+
+            <div class="element">
+                <label for="password2">Confirm Password</label>
+                <input type="password" name="password2" id="password2">
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <div class="another-link">
+            <a href="{% url 'login' %}">Already Signed Up?</a>
+        </div>
+    </main> 
+</body>
+</html>
+
+
+

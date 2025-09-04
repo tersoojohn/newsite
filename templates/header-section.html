@@ -1,0 +1,69 @@
+{% load static %}
+{% block content %}
+
+<div class="flag">
+    <img src="{% static 'images/flag.png' %}" alt="The Nigeria National Flag" class="minify">
+</div>
+
+<div class="major">
+    <h1>NAL Writers</h1>
+</div>
+
+<div class="social-links">
+    <div class="link">
+        <a href="#">
+            <img src="{% static 'images/facebook.png' %}" alt="NAL facebook link" class="minify">
+        </a>
+    </div>
+    
+    <div class="link">
+        <a href="#">
+            <img src="{% static 'images/twitter.png' %}" alt="NAL twitter link" class="minify">
+        </a>
+    </div>
+
+    <div class="link">
+        <a href="#">
+            <img src="{% static 'images/instagram.png' %}" alt="NAL instagram link" class="minify">
+        </a>
+    </div>
+
+</div>
+
+
+<div class="news-sections">
+    {% for category in categories %}
+        <div class="sector">
+            <a href="{% url 'category-page' category.id %}">{{category}}</a>
+        </div>
+    {% endfor %}
+        <div class="sector">
+            <a href="#">Others</a>
+        </div>
+</div>
+
+<div class="news-sections phone">
+    <div class="sector">
+        <a href="#">News</a>
+    </div>
+    <div class="sector">
+        <a href="#">Government</a>
+    </div>
+    <div class="sector phone-others-el">
+        <a href="#">Others</a>
+    </div>
+</div>
+
+<div class="other-sectors">
+    <div class="sector">
+        <a href="#">Education</a>
+    </div>
+    <div class="sector">
+        <a href="#">Sport</a>
+    </div>
+    <div class="sector close-others">
+        <a href="#">close</a>
+    </div>
+</div>
+
+{% endblock %}

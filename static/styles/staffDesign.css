@@ -1,0 +1,159 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.profile{
+    width: 90%;
+    min-height: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0.2rem 0.5rem 1rem gray;
+}
+
+.myImage{
+    width: 25%;
+    height: 15rem;
+    /* background-color: greenyellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0.2rem 0.5rem 1rem gray;
+}
+
+.profile .myImage figure{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.profile .myImage figure img{
+    width: 80%;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+.profile .addpage{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.profile .addpage button{
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 25rem;
+    font-size: 1.2rem;
+}
+
+.profile .addpage button a{
+    color: black;
+    text-decoration: none;
+}
+
+.myPost{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 2rem;
+    width: 96%;
+}
+
+.myPost .section-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.myPost .post{
+    width: 100%;
+}
+
+.myPost .post .component{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 100%;
+    margin: 1rem;
+    box-shadow: 0.2rem 0.5rem 1rem gray;
+    padding: 1.2rem;
+}
+
+.post .component .views{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post .component .rating{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.staff-log{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff-log .section-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.components{
+    width: 96%;
+}
+
+.components .staff{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    border: 0.1rem solid black;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 25px;
+    margin: 1rem 0;
+}
+
+.components .staff a{
+    text-decoration: none;
+    color: black;
+}
+
+.components .staff .staff-name{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* word-spacing: 1.2rem; */
+    font-size: 2rem;
+
+}
+
+.components .staff .update-staff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.components .staff .delete-staff{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}

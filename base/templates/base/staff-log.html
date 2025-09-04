@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{%static 'styles/staffDesign.css' %}">
+</head>
+<body>
+    <header>
+        {% include "header-section.html" %}
+    </header>
+
+    <main>
+        <div class="staff-log">
+            <div class="section-title">
+                Staffs
+            </div>
+
+            <div class="components">
+                {% for staff in staffs %}
+                <div class="staff">
+                    <div class="staff-name"><a href="{% url 'staff' staff.id %}">{{staff.user.first_name}} {{staff.user.last_name}}</a></div>
+                    <div class="update-staff"><a href="{% url 'update-staff' staff.id %}">Update</a></div>
+                    <div class="delete-staff"><a href="{% url 'delete-staff' staff.id %}">Delete</a></div>
+                </div>
+                {% endfor %}
+                <!-- <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div>
+
+                <div class="staff">
+                    <div class="staff-name"><a href="#">Tersoo John Shagba</a></div>
+                    <div class="update-staff"><a href="#">Update</a></div>
+                    <div class="delete-staff"><a href="#">Delete</a></div>
+                </div> -->
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        {% include "footer-section.html" %}
+    </footer>
+</body>
+</html>

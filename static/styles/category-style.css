@@ -1,0 +1,28 @@
+.category-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.category-paper{
+    max-width: 100%;
+    
+    margin: 1rem;
+}
+
+.category-paper figure{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.category-paper figure img{
+    width: 100%;
+    margin: 1rem;
+    padding-right: 0.5rem;
+    /* box-shadow: 0.2rem 0.5rem 1rem gray; */
+}
+
+.category-paper figure figcaption{
+    margin: 1rem;
+    box-shadow: 0.2rem 0.5rem 1rem gray;
+}

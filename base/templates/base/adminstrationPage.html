@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/adminstyles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="title">
+            NAL Writers
+        </div>
+        <div class="welcome">
+            <div class="greetings">
+                Welcome Mr. Agbe
+            </div>
+
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <div class="container">
+                <div class="activity-title">
+                    Possible Activities
+                </div>
+
+                <div class="recent-activites">
+                    <div class="activity">
+                        <span>+</span>Add a new Staff
+                    </div>
+                    <div class="activity">
+                        <span>+</span>Add a News page
+                    </div>
+                    <div class="activity">
+                        <span>-</span>Remove a News Page
+                    </div>
+                    <div class="activity">
+                        <span>-</span>Remove a Staff
+                    </div>
+                    <div class="activity">
+                        <span>+</span>Change password
+                    </div>
+                    <div class="activity">
+                        <a href="#">More</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="staff-section">
+            <div class="section-title">
+                Staffs
+            </div>
+
+            <div class="staff">
+                <div class="component">
+                    <a href="{% url 'add-staff' %}">+Add Staff</a>
+                </div>
+
+                <div class="component">
+                    <a href="{% url 'staff-log' %}">#View Staffs</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workflow">
+            <div class="section-title">
+                Activities
+            </div>
+
+            <div class="activities">
+                <div class="component">
+                    Add Page
+                </div>
+
+                <div class="component">
+                    FeedBacks
+                </div>
+
+                <div class="component">
+                    Staff Messages
+                </div>
+
+                <div class="component">
+                    Development
+                </div>
+                
+                <div class="component">
+                    Announcement
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="access-point">
+            <div class="point a">
+                <a href="{% url 'adminPanel' %}">Admin Page</a>
+            </div>
+
+            <div class="point b">
+                <a href="{% url 'create-page' %}">Create Page</a>
+            </div>
+
+            <div class="point c">
+                <a href="{% url 'login' %}">Login Page</a>
+            </div>
+
+            <div class="point d">
+                <a href="{% url 'register' %}">Registration Page</a>
+            </div>
+
+            <div class="point e">
+                <a href="{% url 'home' %}">News Page</a>
+            </div>
+
+            <div class="point f">
+                <a href="{% url 'home' %}">Index</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

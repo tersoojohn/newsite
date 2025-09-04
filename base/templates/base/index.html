@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nal Writers</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <header>
+        {% include 'header-section.html' %}
+    </header>
+
+    <main>
+        {% for category in categories %}
+        <div class="category-section">
+            <div class="category-title">
+                {{category.name}}
+            </div>
+
+            <div class="category-papers">
+                
+                <div class="minor-papers">
+                    {% for set in newsPages %}
+                        {% for page in set %}
+                            {% if page.category == category %}
+                                <div class="paper">
+                                    <a href="{% url 'newsPage' page.id %}">
+                                        <figure>
+                                            <img src="{{page.main_image.url}}" alt="{{page.main_image_title}}">
+                                            <figcaption>{{page.headline}}</figcaption>
+                                        </figure>
+                                    </a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+        
+                </div>
+                {% for page in lastNewsPages %}
+                {% if page.category == category %}
+                <div class="major-paper">
+                    <a href="{% url 'newsPage' page.id %}">
+                        <figure>
+                            <img src="{{page.main_image.url}}" alt="{{page.main_image_title}}">
+                            <figcaption>{{page.headline}}</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+            </div>
+
+            <div class="category-more">
+                More
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </main>
+
+    <footer>
+        {% include 'footer-section.html' %}
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

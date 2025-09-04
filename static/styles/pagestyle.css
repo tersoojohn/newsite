@@ -1,0 +1,213 @@
+*{
+    font-size: 1.3rem;
+}
+
+/* News page */
+
+/* body{
+    min-height: 100vh;
+} */
+
+/* main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+main .page-topic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+main .page-image{
+    background-color: rgb(228, 226, 226);
+    margin-bottom: 20px;
+}
+
+main .page-image figure img{
+    width: 100%;
+    height: 50rem;
+}
+
+main .page-image figure figcaption{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+main .author, main .category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+main .author .name {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.author span{
+    font-weight: 700;
+}
+
+main .category{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main .paragraphs{
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .paragraphs p{
+    text-indent: 2rem;
+    word-spacing: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+main .paragraphs .sub-image{
+    width: 95%;
+    background-color: rgb(228, 226, 226);
+}
+
+main .paragraphs .sub-image figure img{
+    width: 100%;
+}
+
+main .paragraphs .sub-image figure figcaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+/* Page .pageform */
+
+main .creation-title{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .pageform{
+    background-color: rgb(190, 189, 189);
+    margin: 1rem;
+}
+
+main .pageform .element,
+main .pageform .image-title{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+main .pageform .image{
+    margin: 0.1rem 0;
+}
+
+main .pageform .image{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .pageform .image label:hover{
+    cursor: pointer;;
+}
+
+main .pageform .image label{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border-radius: 25px;
+    margin: 0.5rem 0;
+}
+
+main .pageform .image input{
+    display: none;
+}
+
+main .pageform .news-content{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main .pageform .news-content textarea{
+    width: 98%;
+    min-height: 80rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+main .pageform .submit{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+main .another-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .comment-section .section-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+main .comment-section .comment-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+main .comment-section .comment-input form {
+    width: 80%;
+}
+
+.comment-section .comment-input form #comment{
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 25px;
+
+}
+.comment-section .comment-input form #submit{
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.comment-section .comments{
+    margin: 1rem;
+}
+
+.comment-section .comments p{
+    margin-bottom: 0.5rem;
+    box-shadow: 0.2rem 0.5rem 1rem gray;
+}

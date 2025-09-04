@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/staffDesign.css' %}">
+</head>
+<body>
+    <header>
+        {% include "header-section.html" %}
+    </header>
+
+    <main>
+        <div class="profile">
+            <div class="addpage">
+                <button><a href="{% url 'create-page' %}">+Add Page</a></button>
+            </div>
+            <div class="myImage">
+                <figure>
+                    {% if staff.avatar %}
+                        <img src="{{staff.avatar.url}}" alt="{{staff.user.first_name}} image">
+                    {% else %}
+                        <img src="{% static 'images/avatar.jpeg' %}" alt="user image">
+                    {% endif %}
+                    <figcaption>
+                        <div>{{staff.user.first_name}} {{staff.user.last_name}}</div>
+                        <div>{{staff.field}}</div>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="info">
+                <div class="basic">
+                    <div class="dob">Date of Birth: {{staff.date_of_birth}}</div>
+                    <div class="place">Country: Nigeria</div>
+                    <div class="address">Nyanya Resident, Abuja</div>
+                </div>
+
+                <div class="company-history">
+                    <p>He was hired September 2 2025 by Lex corps and has been in action since Then. His best friend is Lex Luthor and they have been cooking evil scheme, birds of a feather flock together.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui deleniti tenetur dicta non mollitia? Asperiores, maxime beatae eos impedit tempora quas cupiditate nobis odio deserunt quae aliquam minus nesciunt animi ducimus veniam ad possimus velit aspernatur? Autem, quas! Et vero unde quisquam. Deleniti nemo quia sint eligendi nostrum ad corrupti.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quo quaerat enim natus quod dolor, possimus aliquid delectus sequi officia. Magnam ullam sit quia, et accusamus nulla impedit quibusdam perspiciatis, earum hic perferendis consequatur in recusandae eaque error, facilis nemo. Amet dicta voluptas eligendi ut, laborum ab nisi eius! Doloribus cum id tenetur sed, cumque veritatis culpa nisi corrupti consequuntur.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos corporis officiis error voluptas cum incidunt ducimus velit facere nemo amet, harum, mollitia odit quas doloribus. Facilis minus a perferendis aspernatur optio vitae dolores minima laboriosam, omnis earum sapiente quia neque quaerat ipsam harum itaque voluptate reprehenderit sunt impedit dolorum molestiae magnam at! Consequatur, corporis! Dolorum cumque voluptatem error officia. Fuga, non earum autem hic explicabo incidunt, aperiam deleniti nobis voluptatum accusamus nihil, velit sed sunt! Nostrum maiores, ducimus dolorum omnis temporibus sed inventore illo enim fugiat, nemo hic dicta possimus aliquam magni! Blanditiis nam facilis quidem odit illum maiores magnam ex qui aperiam neque saepe in, architecto placeat nobis repudiandae. Error quis tempora excepturi earum est illo quo quos suscipit?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed temporibus eius sit maxime repudiandae mollitia ab nam, ex quos cum atque. Possimus iusto, consequatur nulla reiciendis officiis nemo. Odio eaque sint soluta reiciendis mollitia voluptates blanditiis beatae, doloribus voluptatem, molestias expedita obcaecati voluptatibus exercitationem modi sequi, esse recusandae natus? Omnis consequuntur aliquid unde mollitia blanditiis. Et expedita porro ut quidem aspernatur harum laboriosam, labore repudiandae eos eius numquam, ipsam possimus quis quod. Eius nobis voluptates similique molestias corporis est ullam recusandae officia suscipit facere sed veritatis id aspernatur eum, illo provident itaque. Voluptatum nemo commodi quo excepturi, rem aliquam iusto maxime libero assumenda harum ipsa, doloribus adipisci soluta architecto optio, amet exercitationem ex cumque praesentium voluptate fugit! Inventore pariatur eveniet odio, iure mollitia officia, velit molestias eaque neque fuga voluptatem magni similique, repudiandae labore nemo quos temporibus voluptatibus ad laborum?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="myPost">
+            <div class="section-title">Recent Post</div>
+
+            <div class="post">
+                {% for work in works %}
+                <div class="component">
+                    <span class="headline">{{work.headline}}</span>
+                    <span class="views">125 views </span> 
+                    <span class="rating">7/10 by 20</span>
+                </div>
+                {% endfor %}
+
+                <!-- <div class="component">
+                    <span class="headline">The road to Atlas</span>
+                    <span class="views">125 views </span> 
+                    <span class="rating">7/10 by 20</span>
+                </div>
+
+                <div class="component">
+                    <span class="headline">The road to Atlas</span>
+                    <span class="views">125 views </span> 
+                    <span class="rating">7/10 by 20</span>
+                </div>
+
+                <div class="component">
+                    <span class="headline">The road to Atlas</span>
+                    <span class="views">125 views </span> 
+                    <span class="rating">7/10 by 20</span>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        {% include 'footer-section.html' %}
+    </footer>
+</body>
+</html>

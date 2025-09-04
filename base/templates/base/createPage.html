@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/pagestyle.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    
+    <main>
+        <div class="creation-title">
+            Add Page
+        </div>
+        <form action="" class="pageform" method="POST"  enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="element">
+                <label for="topic">Headline</label>
+                <input type="text" name="headline" id="headline">
+            </div>
+
+            <div class="element">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+
+            <div class="element">
+                <label for="category">Category</label>
+                <input type="text" name="category" id="category">
+            </div>
+
+            <div class="image">
+                <label for="image1">
+                    <input type="file" name="image1" id="image1">
+                    Main image
+                </label>
+                
+            </div>
+
+            <div class="image-title">
+                <label for="image1-title">Main Image Title</label>
+                <input type="text" name="image1-title" id="image1-title">
+            </div>
+
+            <div class="image">
+                <label for="image2">
+                    <input type="file" name="image2" id="image2">
+                    Second Image
+                </label>
+                
+            </div>
+
+            <div class="image-title">
+                <label for="image2-title">Sub Image Title</label>
+                <input type="text" name="image2-title" id="image2-title">
+                
+            </div>
+
+            <div class="news-content">
+                <label for="news-filling">News Content</label>
+                <textarea name="news-content" id="news-content"></textarea>
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+            
+        </form>
+    </main>
+
+</body>
+</html>
+

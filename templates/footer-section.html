@@ -1,0 +1,32 @@
+<div class="news-sections">
+    {% for category in categories %}
+        <div class="sector">
+            <a href="{% url 'category-page' category.id %}">{{category}}</a>
+        </div>
+    {% endfor %}
+    <div class="sector">
+        <a href="#">Others</a>
+    </div>
+</div>
+
+<div class="news-sections phone">
+    <div class="sector">
+        <a href="#">Politics</a>
+    </div>
+    <div class="sector">
+        <a href="#">Education</a>
+    </div>
+    <div class="sector top">
+        <a href="index.html">Top</a>
+    </div>
+</div>
+
+<div class="contact">
+    <div class="contact-head">You can reach us via</div>
+    <div class="number">+234 9122277965</div>
+    <div class="email">shagbatersoostudy@gmail.com</div>
+</div>
+
+<div class="copyrights">
+    Copyrights: @Cyrus
+</div>
